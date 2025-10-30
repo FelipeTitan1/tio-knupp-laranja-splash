@@ -8,7 +8,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-background via-accent/5 to-background">
       <div className="absolute inset-0 opacity-5">
         <img 
           src={orangePattern} 
@@ -20,12 +20,12 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Pronto para transformar suas manhãs com{" "}
-            <span className="text-gradient">suco de verdade</span>?
+            Assine agora e receba direto no{" "}
+            <span className="text-gradient">WhatsApp</span>! 📲
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Junte-se a centenas de famílias que já escolheram saúde e sabor natural todos os dias
+            Transforme sua rotina com o sabor da laranja natural — entregue toda semana, com praticidade e frescor que você merece.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -33,20 +33,10 @@ const FinalCTA = () => {
               variant="hero" 
               size="lg" 
               onClick={handleWhatsApp}
-              className="group text-lg"
+              className="group text-lg px-12 h-14"
             >
               <MessageCircle className="mr-2 h-6 w-6 group-hover:rotate-12 transition-transform" />
-              Assinar pelo WhatsApp
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={handleWhatsApp}
-              className="text-lg"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Falar com especialista
+              Falar no WhatsApp e escolher meu plano
             </Button>
           </div>
           

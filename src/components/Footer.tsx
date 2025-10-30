@@ -7,8 +7,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold text-gradient mb-4">Tio Knupp</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-4">
               Suco natural de laranja 100% fresco, direto da natureza para sua casa.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              📍 Ceilândia | @tioknupp
             </p>
           </div>
           
@@ -22,11 +25,11 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold mb-4">Informações</h4>
+            <h4 className="font-bold mb-4">Valores</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>Grande São Paulo, SP</p>
-              <p>CNPJ: 00.000.000/0001-00</p>
-              <p>Todos os direitos reservados</p>
+              <p>🍊 100% natural</p>
+              <p>🚫 Sem conservantes</p>
+              <p>💛 Produzido com amor</p>
             </div>
           </div>
         </div>
