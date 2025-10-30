@@ -3,21 +3,27 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Silva",
-    location: "São Paulo, SP",
-    text: "O melhor suco de laranja que já tomei! Fresco, saboroso e chega sempre na hora certa. Minha família adora!",
+    name: "Marina",
+    role: "Assinante Plus",
+    text: "Perfeito para minha rotina corrida! O sabor é natural de verdade.",
     rating: 5
   },
   {
-    name: "João Santos",
-    location: "Rio de Janeiro, RJ",
-    text: "Comecei a tomar para melhorar minha saúde e não consigo mais ficar sem. É como ter uma laranjeira em casa!",
+    name: "Fernando",
+    role: "Gerente de Hotel",
+    text: "Uso nos cafés da manhã do hotel. Padrão excelente.",
     rating: 5
   },
   {
-    name: "Ana Paula",
-    location: "Belo Horizonte, MG",
-    text: "A praticidade de receber em casa o suco natural faz toda diferença na correria do dia a dia. Recomendo muito!",
+    name: "Carla",
+    role: "Assinante Premium",
+    text: "Minha família adora! As crianças pedem todo dia. É saúde garantida.",
+    rating: 5
+  },
+  {
+    name: "Roberto",
+    role: "Assinante Padrão",
+    text: "Comecei a tomar para melhorar minha imunidade. Melhor decisão!",
     rating: 5
   }
 ];
@@ -28,14 +34,14 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            O que nossos clientes <span className="text-gradient">dizem</span>
+            Quem ama saúde, <span className="text-gradient">ama Tio Knupp</span> ⭐
           </h2>
           <p className="text-xl text-muted-foreground">
-            Histórias reais de quem transformou sua rotina com o Tio Knupp
+            Depoimentos reais de quem já faz parte da família Tio Knupp
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -54,7 +60,7 @@ const Testimonials = () => {
               
               <div>
                 <div className="font-bold text-foreground">{testimonial.name}</div>
-                <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                <div className="text-sm text-muted-foreground">{testimonial.role}</div>
               </div>
             </Card>
           ))}

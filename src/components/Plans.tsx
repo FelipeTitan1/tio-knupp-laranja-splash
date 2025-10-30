@@ -4,50 +4,53 @@ import { Check, MessageCircle } from "lucide-react";
 
 const plans = [
   {
-    name: "Plano Semanal",
-    description: "Perfeito para experimentar",
-    price: "89",
-    period: "semana",
-    deliveries: "2 entregas",
-    amount: "2 litros por entrega",
+    name: "🥤 Padrão",
+    description: "Ideal para começar",
+    price: "96",
+    period: "mês",
+    quantity: "16 sucos (300 ml)",
+    delivery: "4 por semana",
     features: [
-      "4 litros de suco fresco por semana",
-      "Entrega 2x na semana",
-      "Flexibilidade para pausar",
-      "Sem fidelidade"
+      "16 sucos de 300ml por mês",
+      "4 entregas por semana",
+      "Entrega gratuita em Ceilândia",
+      "Opção de retirada em pontos parceiros",
+      "Sem contrato de fidelidade"
     ],
     popular: false
   },
   {
-    name: "Plano Mensal",
+    name: "🍹 Plus",
     description: "Mais economia, mais saúde",
-    price: "299",
+    price: "188",
     period: "mês",
-    deliveries: "8 entregas",
-    amount: "2 litros por entrega",
+    quantity: "32 sucos (300 ml)",
+    delivery: "8 por semana",
     features: [
-      "16 litros de suco fresco por mês",
-      "Entrega 2x por semana",
-      "Economia de 16%",
-      "Suporte prioritário",
-      "Brinde de boas-vindas"
+      "32 sucos de 300ml por mês",
+      "8 entregas por semana",
+      "Entrega gratuita em Ceilândia",
+      "Opção de retirada em pontos parceiros",
+      "Economia de 2%",
+      "Suporte prioritário"
     ],
     popular: true
   },
   {
-    name: "Plano Família",
+    name: "🍊 Premium",
     description: "Para toda a família",
-    price: "549",
+    price: "370",
     period: "mês",
-    deliveries: "12 entregas",
-    amount: "3 litros por entrega",
+    quantity: "64 sucos (300 ml)",
+    delivery: "16 por semana",
     features: [
-      "36 litros de suco fresco por mês",
-      "Entrega 3x por semana",
-      "Economia de 25%",
+      "64 sucos de 300ml por mês",
+      "16 entregas por semana",
+      "Entrega gratuita em Ceilândia",
+      "Opção de retirada em pontos parceiros",
+      "Economia de 3%",
       "Suporte prioritário VIP",
-      "Kit família de brindes",
-      "Receitas exclusivas"
+      "Brinde especial"
     ],
     popular: false
   }
@@ -62,12 +65,15 @@ const Plans = () => {
   return (
     <section id="planos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Escolha seu <span className="text-gradient">plano ideal</span>
+            Escolha seu plano <span className="text-gradient">Tio Knupp</span> 🍹
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Todos os planos incluem suco 100% natural e entrega na sua casa
+          <p className="text-xl text-muted-foreground mb-2">
+            Assine e receba sucos frescos todas as semanas
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Prontos para beber e cheios de energia natural
           </p>
         </div>
         
@@ -89,12 +95,17 @@ const Plans = () => {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
-                <div className="mb-2">
+                <div className="mb-3">
                   <span className="text-5xl font-bold text-primary">R$ {plan.price}</span>
                   <span className="text-muted-foreground">/{plan.period}</span>
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {plan.deliveries} • {plan.amount}
+                <div className="space-y-1">
+                  <div className="text-sm font-semibold text-foreground">
+                    {plan.quantity}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {plan.delivery}
+                  </div>
                 </div>
               </div>
               
@@ -120,7 +131,15 @@ const Plans = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="text-center mt-12 space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
+            <div className="flex items-center gap-2 text-secondary">
+              🟢 Entrega gratuita em Ceilândia e regiões próximas
+            </div>
+            <div className="flex items-center gap-2 text-secondary">
+              🟢 Opção de retirada em pontos parceiros
+            </div>
+          </div>
           <p className="text-muted-foreground">
             💚 Cancele quando quiser, sem taxas ou multas
           </p>
