@@ -8,18 +8,17 @@ const Footer = () => {
             <p className="text-muted-foreground mb-4">
               Suco natural de laranja 100% fresco, direto da natureza para sua casa.
             </p>
-            <p className="text-sm text-muted-foreground">📍 Ceilândia | @tioknupp </p>
+            <p className="text-sm text-muted-foreground">
+              📍 Ceilândia | @tioknupp
+            </p>
           </div>
           
           <div>
             <h4 className="font-bold mb-4">Contato</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>WhatsApp: (61) 9 81149615</p>
-              <p>Email: tioknupp@gmail.com</p>
-              <p>Horário: Seg-Sex, 8h-18h 
-
-
-CNPJ: 58200799</p>
+              <p>Horário: Seg-Sex, 8h-18h  </p>
+              <p>Email: contato@tioknupp.com.br</p>
+              <p>Horário: Seg-Sex, 8h-18h</p>
             </div>
           </div>
           
