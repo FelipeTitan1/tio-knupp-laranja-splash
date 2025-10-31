@@ -3,13 +3,6 @@ import { MessageCircle, Phone } from "lucide-react";
 import orangePattern from "@/assets/orange-pattern.jpg";
 
 const FinalCTA = () => {
-  const handleWhatsApp = () => {
-    const newWindow = window.open("https://wa.me/message/6ZI5H6O6YBKDO1", "_blank", "noopener,noreferrer");
-    if (!newWindow) {
-      window.location.href = "https://wa.me/message/6ZI5H6O6YBKDO1";
-    }
-  };
-
   return (
     <section className="relative py-24 overflow-hidden bg-gradient-to-b from-background via-accent/5 to-background">
       <div className="absolute inset-0 opacity-5">
@@ -32,15 +25,24 @@ const FinalCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              onClick={handleWhatsApp}
-              className="group text-lg px-12 h-14"
+            <a 
+              href="https://api.whatsapp.com/send?phone=556182030509&text=Olá!%20Quero%20assinar%20o%20Tio%20Knupp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex"
             >
-              <MessageCircle className="mr-2 h-6 w-6 group-hover:rotate-12 transition-transform" />
-              Falar no WhatsApp e escolher meu plano
-            </Button>
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group text-lg px-12 h-14 w-full"
+                asChild
+              >
+                <span>
+                  <MessageCircle className="mr-2 h-6 w-6 group-hover:rotate-12 transition-transform" />
+                  Falar no WhatsApp e escolher meu plano
+                </span>
+              </Button>
+            </a>
           </div>
           
           <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">

@@ -3,13 +3,6 @@ import heroJuice from "@/assets/hero-juice.jpg";
 import { MessageCircle } from "lucide-react";
 
 const Hero = () => {
-  const handleWhatsApp = () => {
-    const newWindow = window.open("https://wa.me/message/6ZI5H6O6YBKDO1", "_blank", "noopener,noreferrer");
-    if (!newWindow) {
-      window.location.href = "https://wa.me/message/6ZI5H6O6YBKDO1";
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent"></div>
@@ -38,15 +31,24 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                onClick={handleWhatsApp}
-                className="group"
+              <a 
+                href="https://api.whatsapp.com/send?phone=556182030509&text=Olá!%20Quero%20assinar%20o%20Tio%20Knupp" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex"
               >
-                <MessageCircle className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Assinar agora pelo WhatsApp
-              </Button>
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="group w-full"
+                  asChild
+                >
+                  <span>
+                    <MessageCircle className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                    Assinar agora pelo WhatsApp
+                  </span>
+                </Button>
+              </a>
               
               <Button 
                 variant="outline" 

@@ -57,13 +57,6 @@ const plans = [
 ];
 
 const Plans = () => {
-  const handleSubscribe = (paymentLink: string) => {
-    const newWindow = window.open(paymentLink, "_blank", "noopener,noreferrer");
-    if (!newWindow) {
-      window.location.href = paymentLink;
-    }
-  };
-
   return (
     <section id="planos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -120,15 +113,24 @@ const Plans = () => {
                 ))}
               </ul>
               
-              <Button 
-                variant={plan.popular ? "hero" : "outline"}
-                size="lg"
-                className="w-full"
-                onClick={() => handleSubscribe(plan.paymentLink)}
+              <a 
+                href={plan.paymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full"
               >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Assinar agora
-              </Button>
+                <Button 
+                  variant={plan.popular ? "hero" : "outline"}
+                  size="lg"
+                  className="w-full"
+                  asChild
+                >
+                  <span>
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Assinar agora
+                  </span>
+                </Button>
+              </a>
             </Card>
           ))}
         </div>
