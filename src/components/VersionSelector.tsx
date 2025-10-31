@@ -1,23 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Crown, Leaf, Zap } from "lucide-react";
-import { useEffect, useState } from "react";
-
+import { Leaf, Zap } from "lucide-react";
 const VersionSelector = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(prev => !prev);
-    }, 30 * 60 * 1000); // 30 minutos em milissegundos
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+  return <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
       <div className="bg-card border border-border rounded-2xl shadow-2xl p-4 space-y-2">
         <p className="text-xs font-semibold text-muted-foreground mb-3 text-center">
           Explore outras versões
@@ -31,7 +16,7 @@ const VersionSelector = () => {
         
         <Link to="/premium">
           <Button variant="outline" size="sm" className="w-full justify-start gap-2">
-            <Crown className="h-4 w-4" />
+            
             Premium
           </Button>
         </Link>
@@ -50,8 +35,6 @@ const VersionSelector = () => {
           </Button>
         </Link>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default VersionSelector;
