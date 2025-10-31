@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 
 const Hero = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de assinar o Suco Natural Tio Knupp", "_blank");
+    window.open("https://wa.me/message/6ZI5H6O6YBKDO1", "_blank");
   };
 
   return (

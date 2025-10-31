@@ -16,7 +16,8 @@ const plans = [
       "Entrega gratuita em Brasília - DF",
       "Sem contrato de fidelidade"
     ],
-    popular: false
+    popular: false,
+    paymentLink: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=b1569b099c184088a5c721e82dcf5260"
   },
   {
     name: "🍹 Plus",
@@ -32,7 +33,8 @@ const plans = [
       "Economia de 2%",
       "Suporte prioritário"
     ],
-    popular: true
+    popular: true,
+    paymentLink: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=711aaf388b4246dcb577b5d5b8839dec"
   },
   {
     name: "🍊 Premium",
@@ -49,14 +51,14 @@ const plans = [
       "Suporte prioritário VIP",
       "Brinde especial"
     ],
-    popular: false
+    popular: false,
+    paymentLink: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=76e3bb5271f249f1baf174b3714b5465"
   }
 ];
 
 const Plans = () => {
-  const handleWhatsApp = (planName: string) => {
-    const message = encodeURIComponent(`Olá! Gostaria de assinar o ${planName} do Suco Natural Tio Knupp`);
-    window.open(`https://wa.me/5561981149615?text=${message}`, "_blank");
+  const handleSubscribe = (paymentLink: string) => {
+    window.open(paymentLink, "_blank");
   };
 
   return (
@@ -119,7 +121,7 @@ const Plans = () => {
                 variant={plan.popular ? "hero" : "outline"}
                 size="lg"
                 className="w-full"
-                onClick={() => handleWhatsApp(plan.name)}
+                onClick={() => handleSubscribe(plan.paymentLink)}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Assinar agora
