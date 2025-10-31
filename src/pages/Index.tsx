@@ -6,7 +6,6 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import VersionSelector from "@/components/VersionSelector";
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
       <FAQ />
       <FinalCTA />
       <Footer />
-      <VersionSelector />
     </main>
   );
 };
