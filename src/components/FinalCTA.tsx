@@ -4,7 +4,7 @@ import orangePattern from "@/assets/orange-pattern.jpg";
 
 const FinalCTA = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de assinar o Suco Natural Tio Knupp", "_blank");
+    window.open("https://wa.me/5561981149615?text=Olá! Gostaria de assinar o Suco Natural Tio Knupp", "_blank");
   };
 
   return (

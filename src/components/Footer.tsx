@@ -1,6 +1,8 @@
 import { Heart } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="bg-muted/50 py-12 border-t">
+  return (
+    <footer className="bg-muted/50 py-12 border-t">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -9,15 +11,16 @@ const Footer = () => {
               Suco natural de laranja 100% fresco, direto da natureza para sua casa.
             </p>
             <p className="text-sm text-muted-foreground">
-              📍 Ceilândia | @tioknupp
+              📍 Brasília - DF | CNPJ: 58200799000140
             </p>
           </div>
           
           <div>
             <h4 className="font-bold mb-4">Contato</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>Horário: Seg-Sex, 8h-18h  </p>
-              <p>Email: contato@tioknupp.com.br</p>
+              <p>WhatsApp: (61) 9 8114-9615</p>
+              <p>Email: tioknupp@gmail.com</p>
+              <p>Instagram: @tioknupp</p>
               <p>Horário: Seg-Sex, 8h-18h</p>
             </div>
           </div>
@@ -38,6 +41,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

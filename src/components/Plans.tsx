@@ -13,8 +13,7 @@ const plans = [
     features: [
       "16 sucos de 300ml por mês",
       "4 entregas por semana",
-      "Entrega gratuita em Ceilândia",
-      "Opção de retirada em pontos parceiros",
+      "Entrega gratuita em Brasília - DF",
       "Sem contrato de fidelidade"
     ],
     popular: false
@@ -29,8 +28,7 @@ const plans = [
     features: [
       "32 sucos de 300ml por mês",
       "8 entregas por semana",
-      "Entrega gratuita em Ceilândia",
-      "Opção de retirada em pontos parceiros",
+      "Entrega gratuita em Brasília - DF",
       "Economia de 2%",
       "Suporte prioritário"
     ],
@@ -46,8 +44,7 @@ const plans = [
     features: [
       "64 sucos de 300ml por mês",
       "16 entregas por semana",
-      "Entrega gratuita em Ceilândia",
-      "Opção de retirada em pontos parceiros",
+      "Entrega gratuita em Brasília - DF",
       "Economia de 3%",
       "Suporte prioritário VIP",
       "Brinde especial"
@@ -59,7 +56,7 @@ const plans = [
 const Plans = () => {
   const handleWhatsApp = (planName: string) => {
     const message = encodeURIComponent(`Olá! Gostaria de assinar o ${planName} do Suco Natural Tio Knupp`);
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/5561981149615?text=${message}`, "_blank");
   };
 
   return (
@@ -134,10 +131,7 @@ const Plans = () => {
         <div className="text-center mt-12 space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
             <div className="flex items-center gap-2 text-secondary">
-              🟢 Entrega gratuita em Ceilândia e regiões próximas
-            </div>
-            <div className="flex items-center gap-2 text-secondary">
-              🟢 Opção de retirada em pontos parceiros
+              🟢 Entrega gratuita em Brasília - DF
             </div>
           </div>
           <p className="text-muted-foreground">

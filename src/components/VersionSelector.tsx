@@ -1,8 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Crown, Leaf, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const VersionSelector = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(prev => !prev);
+    }, 30 * 60 * 1000); // 30 minutos em milissegundos
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
     <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
       <div className="bg-card border border-border rounded-2xl shadow-2xl p-4 space-y-2">

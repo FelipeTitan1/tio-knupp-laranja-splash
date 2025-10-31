@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Qual é a validade do suco?",
-    answer: "Como nosso suco é 100% natural e sem conservantes, recomendamos consumir em até 24 horas após a entrega para garantir o máximo de frescor e nutrientes. Por isso fazemos entregas frequentes!"
+    answer: "Nosso suco é 100% natural, sem conservantes nem aditivos. Após a entrega, recomendamos manter refrigerado entre 0 °C e 5 °C. Nessa condição, ele mantém o sabor e os nutrientes por até 3 dias. Para o sabor mais fresco (como se tivesse sido espremido na hora), o ideal é consumir em até 24 horas. 💡 Dica: se quiser armazenar por mais tempo, pode congelar o suco — ele preserva o sabor e os nutrientes por até 30 dias no freezer."
   },
   {
     question: "Como é feita a entrega?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Qual a região de entrega?",
-    answer: "Atualmente entregamos em toda a Grande São Paulo. Entre em contato pelo WhatsApp para confirmar se atendemos sua região."
+    answer: "Atualmente entregamos em toda Brasília. Entre em contato pelo WhatsApp para confirmar se atendemos sua região."
   }
 ];
 
