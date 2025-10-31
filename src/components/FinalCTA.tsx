@@ -4,7 +4,10 @@ import orangePattern from "@/assets/orange-pattern.jpg";
 
 const FinalCTA = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/message/6ZI5H6O6YBKDO1", "_blank");
+    const newWindow = window.open("https://wa.me/message/6ZI5H6O6YBKDO1", "_blank", "noopener,noreferrer");
+    if (!newWindow) {
+      window.location.href = "https://wa.me/message/6ZI5H6O6YBKDO1";
+    }
   };
 
   return (

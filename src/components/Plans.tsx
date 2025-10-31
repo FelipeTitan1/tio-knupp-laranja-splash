@@ -58,7 +58,10 @@ const plans = [
 
 const Plans = () => {
   const handleSubscribe = (paymentLink: string) => {
-    window.open(paymentLink, "_blank");
+    const newWindow = window.open(paymentLink, "_blank", "noopener,noreferrer");
+    if (!newWindow) {
+      window.location.href = paymentLink;
+    }
   };
 
   return (
