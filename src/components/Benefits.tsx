@@ -73,11 +73,14 @@ const Benefits = () => {
         <div className="max-w-5xl mx-auto animate-fade-in gpu-accelerate" style={{ animationDelay: '0.6s', willChange: 'transform, opacity' }}>
           <img
             src={kitchenBottles}
+            srcSet={kitchenBottles}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 80vw, 1024px"
             alt="Garrafas de suco natural em bancada de cozinha iluminada"
             className="rounded-2xl shadow-2xl w-full h-auto object-cover"
             width="1600"
             height="900"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

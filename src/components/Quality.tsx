@@ -10,11 +10,14 @@ const Quality = () => {
             <div className="order-2 lg:order-1 animate-fade-in gpu-accelerate" style={{ willChange: 'transform, opacity' }}>
               <img
                 src={qualityProcess}
+                srcSet={qualityProcess}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 552px"
                 alt="Processo artesanal de preparo do suco com laranjas frescas"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                 width="1600"
                 height="900"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             
