@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroJuice from "@/assets/hero-juice.jpg";
 import { MessageCircle } from "lucide-react";
 
 const Hero = () => {
@@ -83,9 +82,7 @@ const Hero = () => {
           <div className="relative animate-fade-in gpu-accelerate" style={{ animationDelay: '0.2s', willChange: 'transform, opacity' }}>
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl blur-3xl animate-float" style={{ willChange: 'transform' }}></div>
             <img
-              src={heroJuice}
-              srcSet={heroJuice}
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 628px"
+              src="/images/hero-juice.jpg"
               alt="Copo de suco natural de laranja com gomos frescos"
               className="relative rounded-3xl shadow-2xl w-full h-auto object-cover animate-float gpu-accelerate"
               style={{ animationDelay: '0.5s', willChange: 'transform' }}
