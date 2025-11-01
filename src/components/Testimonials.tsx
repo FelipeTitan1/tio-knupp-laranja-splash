@@ -45,8 +45,8 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none animate-fade-in gpu-accelerate"
+              style={{ animationDelay: `${index * 0.1}s`, willChange: 'transform, opacity' }}
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

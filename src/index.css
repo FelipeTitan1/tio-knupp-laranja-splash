@@ -123,16 +123,45 @@ All colors MUST be HSL.
     @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
   }
   
+  /* Performance optimizations - prevent forced reflows */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .contain-layout {
+    contain: layout style paint;
+  }
+  
   .animate-float {
     animation: float 3s ease-in-out infinite;
+    transform: translateZ(0);
+    will-change: transform;
   }
   
   @keyframes float {
     0%, 100% {
-      transform: translateY(0);
+      transform: translateY(0) translateZ(0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-10px) translateZ(0);
+    }
+  }
+  
+  /* Optimize fade-in animation to use only transform and opacity */
+  .animate-fade-in {
+    animation: fadeInOptimized 0.6s ease-out forwards;
+    will-change: transform, opacity;
+  }
+  
+  @keyframes fadeInOptimized {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
   }
 }

@@ -7,13 +7,14 @@ const Quality = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="order-2 lg:order-1 animate-fade-in" style={{ willChange: 'transform, opacity' }}>
+            <div className="order-2 lg:order-1 animate-fade-in gpu-accelerate" style={{ willChange: 'transform, opacity' }}>
               <img
                 src={qualityProcess}
                 alt="Processo artesanal de preparo do suco com laranjas frescas"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                 width="1600"
                 height="900"
+                loading="lazy"
               />
             </div>
             

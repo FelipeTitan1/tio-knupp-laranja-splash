@@ -45,10 +45,10 @@ const FAQ = () => {
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className="max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s', willChange: 'transform, opacity' }}>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionItem key={index} value={`item-${index}`} className="gpu-accelerate">
                 <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
                   {faq.question}
                 </AccordionTrigger>

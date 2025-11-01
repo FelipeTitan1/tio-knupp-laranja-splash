@@ -76,10 +76,10 @@ const Plans = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index}
-              className={`relative p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in ${
+              className={`relative p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in gpu-accelerate ${
                 plan.popular ? 'border-2 border-primary shadow-xl scale-105' : 'border-none'
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.1}s`, willChange: 'transform, opacity' }}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1 rounded-full text-sm font-bold">

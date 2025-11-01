@@ -80,12 +80,12 @@ const Hero = () => {
           </div>
           
           {/* Image */}
-          <div className="relative animate-fade-in" style={{ animationDelay: '0.2s', willChange: 'transform, opacity' }}>
+          <div className="relative animate-fade-in gpu-accelerate" style={{ animationDelay: '0.2s', willChange: 'transform, opacity' }}>
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl blur-3xl animate-float" style={{ willChange: 'transform' }}></div>
             <img
               src={heroJuice}
               alt="Copo de suco natural de laranja com gomos frescos"
-              className="relative rounded-3xl shadow-2xl w-full h-auto object-cover animate-float"
+              className="relative rounded-3xl shadow-2xl w-full h-auto object-cover animate-float gpu-accelerate"
               style={{ animationDelay: '0.5s', willChange: 'transform' }}
               width="1920"
               height="1088"
