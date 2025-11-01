@@ -7,16 +7,18 @@ const Quality = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="order-2 lg:order-1 animate-fade-in">
+            <div className="order-2 lg:order-1 animate-fade-in" style={{ willChange: 'transform, opacity' }}>
               <img
                 src={qualityProcess}
                 alt="Processo artesanal de preparo do suco com laranjas frescas"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                width="1600"
+                height="900"
               />
             </div>
             
             {/* Content */}
-            <div className="order-1 lg:order-2 space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="order-1 lg:order-2 space-y-6 animate-fade-in" style={{ animationDelay: '0.2s', willChange: 'transform, opacity' }}>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
                 Qualidade que você sente no{" "}
                 <span className="text-gradient">primeiro gole</span> 🌿

@@ -58,7 +58,7 @@ const Benefits = () => {
             <Card 
               key={index}
               className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none bg-card animate-fade-in text-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.1}s`, willChange: 'transform, opacity' }}
             >
               <div className="text-5xl mb-4">
                 {benefit.emoji}
@@ -70,11 +70,13 @@ const Benefits = () => {
         </div>
         
         {/* Image Section */}
-        <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s', willChange: 'transform, opacity' }}>
           <img
             src={kitchenBottles}
             alt="Garrafas de suco natural em bancada de cozinha iluminada"
             className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+            width="1600"
+            height="900"
           />
         </div>
       </div>
