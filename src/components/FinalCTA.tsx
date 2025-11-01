@@ -10,6 +10,10 @@ const FinalCTA = () => {
           src={orangePattern} 
           alt="Padrão de laranjas" 
           className="w-full h-full object-cover"
+          width="1600"
+          height="900"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       
