@@ -16,8 +16,16 @@
     <!-- Preload LCP image -->
     <link rel="preload" as="image" href="/images/hero-juice.jpg" fetchpriority="high">
     
-    <!-- Fonts loaded with optimal display -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts loaded asynchronously to avoid render blocking -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" 
+      rel="stylesheet"
+      media="print" 
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
 
     <meta property="og:title" content="Tio Knupp - Suco Natural de Laranja 100% Natural" />
     <meta property="og:description" content="Assine o sabor da laranja 100% natural. Sem conservantes, sem aditivos." />
