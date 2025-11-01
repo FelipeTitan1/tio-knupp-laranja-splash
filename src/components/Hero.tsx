@@ -31,7 +31,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a 
-                href="https://api.whatsapp.com/send?phone=556182030509&text=Olá!%20Quero%20assinar%20o%20Tio%20Knupp" 
+                href="https://wa.me/message/6ZI5H6O6YBKDO1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex"
